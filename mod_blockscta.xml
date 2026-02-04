@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" client="site" method="upgrade">
+
+    <name>MOD_BLOCKSCTA</name>
+    <author>Andy Kirk</author>
+    <authorEmail>andy.kirk@npeu.ox.ac.uk</authorEmail>
+    <authorUrl>https://www.npeu.ox.ac.uk</authorUrl>
+    <creationDate>January 2026</creationDate>
+    <copyright>(C) NPEU 2026</copyright>
+    <license>MIT License; see LICENSE.md</license>
+    <group>com_blocks</group>
+
+    <!--  The version string is recorded in the components table -->
+    <version>0.0.1</version>
+    <!-- The description is optional and defaults to the name -->
+    <description>MOD_BLOCKSCTA_XML_DESCRIPTION</description>
+
+    <updateservers>
+        <!-- Note: No spaces or linebreaks allowed between the server tags -->
+        <server type="extension" name="NPEU: mod_blockscta Update Site">https://raw.githubusercontent.com/NPEU/mod_blockscta/main/update-manifest.xml</server>
+    </updateservers>
+
+    <namespace path="src">NPEU\Module\Blockscta</namespace>
+
+    <files>
+        <folder module="mod_blockscta">services</folder>
+        <folder>language</folder>
+        <folder>src</folder>
+        <folder>tmpl</folder>
+    </files>
+
+    <config>
+        <fields name="params"
+            addfieldprefix="NPEU\Module\Blockscta\Site\Field"
+        >
+            <fieldset name="basic">
+                <field
+                    name="cta_text"
+                    type="text"
+                    label="MOD_BLOCKSCTA_MODULE_CTA_TEXT_LABEL"
+                    description="MOD_BLOCKSCTA_MODULE_CTA_TEXT_DESC"
+                />
+                <field
+                    name="cta_url"
+                    type="url"
+                    label="MOD_BLOCKSCTA_MODULE_CTA_URL_LABEL"
+                    description="MOD_BLOCKSCTA_MODULE_CTA_URL_DESC"
+                />
+                <field
+                    name="icon"
+                    type="iconselect"
+                    label="MOD_BLOCKSCTA_MODULE_ICON_LABEL"
+                    description="MOD_BLOCKSCTA_MODULE_DESC"
+                    default="0"
+                >
+                    <option value="0">MOD_BLOCKSCTA_MODULE_ICON_OPTION_NONE</option>
+                </field>
+                <field
+                    name="icon_position"
+                    type="list"
+                    label="MOD_BLOCKSCTA_MODULE_ICON_POSITION_LABEL"
+                    description="MOD_BLOCKSCTA_MODULE_ICON_POSITION_DESC"
+                    showon="icon!:0"
+                >
+                    <option value="before">MOD_BLOCKSCTA_MODULE_ICON_POSITION_OPTION_BEFORE</option>
+                    <option value="after">MOD_BLOCKSCTA_MODULE_ICON_POSITION_OPTION_AFTER</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+
+</extension>
