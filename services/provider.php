@@ -26,8 +26,8 @@ return new class () implements ServiceProviderInterface {
      */
     public function register(Container $container)
     {
-        $container->registerServiceProvider(new ModuleDispatcherFactory('\\NPEU\\Module\\Blockscta'));
-        $container->registerServiceProvider(new HelperFactory('\\NPEU\\Module\\Blockscta\\Site\\Helper'));
+        $container->registerServiceProvider(new ModuleDispatcherFactory('\\NPEU\\Module\\Blocksaccordion'));
+        $container->registerServiceProvider(new HelperFactory('\\NPEU\\Module\\Blocksaccordion\\Site\\Helper'));
 
         $container->registerServiceProvider(new Module());
     }

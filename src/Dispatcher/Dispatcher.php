@@ -27,12 +27,13 @@ class Dispatcher extends AbstractModuleDispatcher implements HelperFactoryAwareI
     protected function getLayoutData(): array
     {
         $data   = parent::getLayoutData();
-        /*$params = $data['params'];
+
+        $params = $data['params'];
 
 
-        $data['stuff'] = $this->getHelperFactory()
+        $data['cta'] = $this->getHelperFactory()
             ->getHelper('BlocksctaHelper')
-            ->getStuff($params, $this->getApplication());*/
+            ->getCta($params, $this->getApplication());
 
         return $data;
     }

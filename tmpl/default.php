@@ -25,3 +25,12 @@ $icon_pos = $params->get('icon_position');
 <div class="blocks-container blockscta-container">
     <a href="<?php echo $url; ?>"><?php if ($icon && $icon_pos == 'before'): ?><span><?php echo $icon ?></span><?php endif; ?><?php echo $text; ?><?php if ($icon && $icon_pos == 'after'): ?><span><?php echo $icon; ?></span><?php endif; ?></a>
 </div>
+
+<?php /*
+extract($cta);
+?>
+
+<div class="blocks-container blockscta-container">
+    <a href="<?php echo $url; ?>"><?php if ($icon && $icon_pos == 'before'): ?><span><?php echo $icon ?></span><?php endif; ?><?php echo $text; ?><?php if ($icon && $icon_pos == 'after'): ?><span><?php echo $icon; ?></span><?php endif; ?></a>
+</div>
+*/ ?>
